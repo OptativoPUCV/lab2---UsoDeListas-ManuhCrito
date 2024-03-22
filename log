@@ -484,3 +484,96 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 48ce1fe
+Fri 22 Mar 2024 10:07:25 PM UTC: 
+ exercises.c | 48 +++++++++++++++++++++++++++++-------------------
+ 1 file changed, 29 insertions(+), 19 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:3: error: variable ‘stack’ has initializer but incomplete type
+  121 |   Stack stack = create_stack();
+      |   ^~~~~
+exercises.c:121:9: error: storage size of ‘stack’ isn’t known
+  121 |   Stack stack = create_stack();
+      |         ^~~~~
+exercises.c:124:16: error: subscripted value is neither array nor pointer nor vector
+  124 |   while (cadena[contador] != '\0')
+      |                ^
+exercises.c:126:18: error: subscripted value is neither array nor pointer nor vector
+  126 |       if ((cadena[contador] == '(')  (cadena[contador] == '{')  (cadena[contador] == '['))
+      |                  ^
+exercises.c:126:45: error: subscripted value is neither array nor pointer nor vector
+  126 |       if ((cadena[contador] == '(')  (cadena[contador] == '{')  (cadena[contador] == '['))
+      |                                             ^
+exercises.c:126:72: error: subscripted value is neither array nor pointer nor vector
+  126 |       if ((cadena[contador] == '(')  (cadena[contador] == '{')  (cadena[contador] == '['))
+      |                                                                        ^
+exercises.c:128:28: error: subscripted value is neither array nor pointer nor vector
+  128 |         push(stack, &cadena[contador]);
+      |                            ^
+exercises.c:130:23: error: subscripted value is neither array nor pointer nor vector
+  130 |       else if ((cadena[contador] == ')')  (cadena[contador] == '}')  (cadena[contador] == ']'))
+      |                       ^
+exercises.c:130:50: error: subscripted value is neither array nor pointer nor vector
+  130 |       else if ((cadena[contador] == ')')  (cadena[contador] == '}')  (cadena[contador] == ']'))
+      |                                                  ^
+exercises.c:130:77: error: subscripted value is neither array nor pointer nor vector
+  130 |       else if ((cadena[contador] == ')')  (cadena[contador] == '}')  (cadena[contador] == ']'))
+      |                                                                             ^
+exercises.c:139:22: error: subscripted value is neither array nor pointer nor vector
+  139 |           if ((cadena[contador] == ')' && caracter == '('))
+      |                      ^
+exercises.c:139:52: error: comparison between pointer and integer [-Werror]
+  139 |           if ((cadena[contador] == ')' && caracter == '('))
+      |                                                    ^~
+exercises.c:143:27: error: subscripted value is neither array nor pointer nor vector
+  143 |           else if ((cadena[contador] == '}' &&caracter == '{'))
+      |                           ^
+exercises.c:143:56: error: comparison between pointer and integer [-Werror]
+  143 |           else if ((cadena[contador] == '}' &&caracter == '{'))
+      |                                                        ^~
+exercises.c:147:27: error: subscripted value is neither array nor pointer nor vector
+  147 |           else if ((cadena[contador] == ']' && *caracter == '['))
+      |                           ^
+exercises.c:121:9: error: unused variable ‘stack’ [-Werror=unused-variable]
+  121 |   Stack stack = create_stack();
+      |         ^~~~~
+test.c: In function ‘test_parentesis_balanceados’:
+test.c:217:31: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  217 |     if(!parentesisBalanceados(s)){
+      |                               ^
+      |                               |
+      |                               char *
+In file included from test.c:5:
+exercises.c:119:32: note: expected ‘char’ but argument is of type ‘char *’
+  119 | int parentesisBalanceados(char cadena)
+      |                           ~~~~~^~~~~~
+test.c:225:30: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  225 |     if(parentesisBalanceados(s)){
+      |                              ^
+      |                              |
+      |                              char *
+In file included from test.c:5:
+exercises.c:119:32: note: expected ‘char’ but argument is of type ‘char *’
+  119 | int parentesisBalanceados(char cadena)
+      |                           ~~~~~^~~~~~
+test.c:233:31: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  233 |     if(!parentesisBalanceados(s)){
+      |                               ^
+      |                               |
+      |                               char *
+In file included from test.c:5:
+exercises.c:119:32: note: expected ‘char’ but argument is of type ‘char *’
+  119 | int parentesisBalanceados(char cadena)
+      |                           ~~~~~^~~~~~
+test.c:241:30: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  241 |     if(parentesisBalanceados(s)){
+      |                              ^
+      |                              |
+      |                              char *
+In file included from test.c:5:
+exercises.c:119:32: note: expected ‘char’ but argument is of type ‘char *’
+  119 | int parentesisBalanceados(char cadena)
+      |                           ~~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ffc9051
