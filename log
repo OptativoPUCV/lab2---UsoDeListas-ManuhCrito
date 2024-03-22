@@ -26,3 +26,9 @@ arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 fed5e16
+Fri 22 Mar 2024 08:20:33 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+5cd8cb8
