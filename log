@@ -219,3 +219,14 @@ exercises.c:66:24: error: invalid use of incomplete typedef ‘List’
       |                        ^~
 Compilation failed
 12f3acb
+Fri 22 Mar 2024 08:37:10 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:66:24: error: ‘L’ is a pointer; did you mean to use ‘->’?
+   66 |       suma += *((int*)L.array[i]);
+      |                        ^
+      |                        ->
+Compilation failed
+8862247
