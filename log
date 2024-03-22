@@ -134,3 +134,17 @@ arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 e5bca25
+Fri 22 Mar 2024 08:25:27 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:20: error: array subscript -10 is outside array bounds of ‘int[1]’ [-Werror=array-bounds]
+   49 |     pushBack(L, &i - 10);
+      |                 ~~~^~~~
+exercises.c:47:11: note: while referencing ‘i’
+   47 |   for(int i = 1; i <= 10; i++)
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+2057b84
