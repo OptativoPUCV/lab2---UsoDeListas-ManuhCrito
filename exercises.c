@@ -116,45 +116,37 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char cadena) 
+int parentesisBalanceados(char* cadena)
 {
-  Stack stack = create_stack();
-  int contador = 0;
+    Stack stack = create_stack();
+    int contador = 0;
 
-  while (cadena[contador] != '\0')
+    while (cadena[contador] != '\0')
     {
-      if ((cadena[contador] == '(')  (cadena[contador] == '{')  (cadena[contador] == '['))
-      {
-        push(stack, &cadena[contador]);
-      }
-      else if ((cadena[contador] == ')')  (cadena[contador] == '}')  (cadena[contador] == ']'))
-      {
-        if (stack == NULL)
+        if (cadena[contador] == '(' || cadena[contador] == '{' || cadena[contador] == '[')
         {
-          return 0;
+            push(stack, cadena[contador]);
         }
-        else
+        else if (cadena[contador] == ')' || cadena[contador] == '}' || cadena[contador] == ']')
         {
-          char* caracter = top(stack);
-          if ((cadena[contador] == ')' && caracter == '('))
-          {
-            pop(stack);
-          }
-          else if ((cadena[contador] == '}' &&caracter == '{'))
-          {
-            pop(stack);
-          }
-          else if ((cadena[contador] == ']' && *caracter == '['))
-          {
-            pop(stack);
-          }
+            if (stack == NULL)
+            {
+                return 0;
+            }
+            else
+            {
+                char caracter = top(stack);  // Get character from top
+                pop(stack);
+                if ((cadena[contador] == ')' && caracter != '(') ||
+                    (cadena[contador] == '}' && caracter != '{') ||
+                    (cadena[contador] == ']' && caracter != '['))
+                {
+                    return 0;  // Mismatched pairs
+                }
+            }
         }
-      }
-      contador++;
+        contador++;
     }
-  if (top(stack) == NULL)
-  {
-    return 1;
-  }
-  return 0;
+
+    return (stack == NULL) ? 1 : 0;  // Return 1 if empty, 0 otherwise
 }
