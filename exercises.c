@@ -43,12 +43,10 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
   List* L = create_list();
-  int suma = 1;
   
   for(int i = 1; i <= 10; i++)
   {
-    pushBack(L, &suma);
-    suma++;
+    pushBack(L, *i);
   }
   return L;
 }
