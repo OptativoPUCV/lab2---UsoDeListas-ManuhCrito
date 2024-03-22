@@ -46,8 +46,7 @@ List* crea_lista() {
   
   for(int i = 1; i <= 10; i++)
   {
-    int value = i + 10; // Add 10 to the actual number
-    push(L, &value);
+    push(L, *i);
   }
   return L;
 }
