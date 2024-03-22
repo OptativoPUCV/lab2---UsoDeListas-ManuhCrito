@@ -129,7 +129,7 @@ int parentesisBalanceados(char *cadena)
       }
       else if (*current == ')')
       {
-        if (isEmpty(stack))
+        if (stack == NULL)
         {
             return 0;
         }
@@ -138,7 +138,7 @@ int parentesisBalanceados(char *cadena)
       current++;
     }
 
-    if (isEmpty(stack))
+    if (stack == NULL)
     {
         return 1;
     }
