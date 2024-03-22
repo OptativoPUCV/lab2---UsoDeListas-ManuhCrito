@@ -230,3 +230,9 @@ exercises.c:66:24: error: ‘L’ is a pointer; did you mean to use ‘->’?
       |                        ->
 Compilation failed
 8862247
+Fri 22 Mar 2024 08:40:21 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  1|4
+total_score: 10/70
+3bb698e

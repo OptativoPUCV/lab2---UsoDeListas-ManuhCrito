@@ -60,12 +60,13 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L)
 {
-  int suma = 0;
-  for (int i = 0 ; L != NULL; i++)
-    {
-      suma += *((int*)L.array[i]);
-    }
-   return suma;
+    int suma = 0;
+    while (first(L) != NULL)
+      {
+        suma += *(int*)first(L);
+        L = next(L);
+      }
+    return suma;
 }
 
 /*
