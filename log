@@ -72,3 +72,13 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 94be07b
+Fri 22 Mar 2024 08:24:02 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:17: error: invalid type argument of unary ‘*’ (have ‘int’)
+   49 |     pushBack(L, *i);
+      |                 ^~
+Compilation failed
+7b25a0c
