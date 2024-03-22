@@ -263,3 +263,16 @@ exercises.c:85:12: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 9674961
+Fri 22 Mar 2024 08:53:43 PM UTC: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:85:30: error: called object ‘current’ is not a function or function pointer
+   85 |         int *current = (int*)current(L);
+      |                              ^~~~~~~
+exercises.c:85:14: note: declared here
+   85 |         int *current = (int*)current(L);
+      |              ^~~~~~~
+Compilation failed
+eb6f203
