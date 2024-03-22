@@ -282,3 +282,14 @@ Fri 22 Mar 2024 09:10:01 PM UTC:
  tests:  2|3
 total_score: 20/70
 889a455
+Fri 22 Mar 2024 09:13:09 PM UTC: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:83:8: error: unused variable ‘dato’ [-Werror=unused-variable]
+   83 |   int *dato = first(L);
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+72ba824
