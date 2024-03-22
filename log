@@ -397,3 +397,14 @@ Fri 22 Mar 2024 09:46:32 PM UTC:
  tests:  5|1
 total_score: 50/70
 ca88c6f
+Fri 22 Mar 2024 09:50:23 PM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:132:23: error: comparison between pointer and integer [-Werror]
+  132 |         if (top(pila) == '(') pop(pila);
+      |                       ^~
+cc1: all warnings being treated as errors
+Compilation failed
+c91dafd
