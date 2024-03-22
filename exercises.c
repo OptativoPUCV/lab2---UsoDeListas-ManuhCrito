@@ -63,7 +63,7 @@ int sumaLista(List *L)
   int suma = 0;
   for (int i = 0 ; L != NULL; i++)
     {
-      suma += *L[i];
+      suma += *((int*)L->array[i]);
     }
    return suma;
 }
