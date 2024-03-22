@@ -311,3 +311,14 @@ Fri 22 Mar 2024 09:16:05 PM UTC:
  tests:  4|1
 total_score: 50/70
 a6e7be1
+Fri 22 Mar 2024 09:24:15 PM UTC: 
+ exercises.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:11: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  126 |       if (isEmpty(stack)) {
+      |           ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+93879c1
